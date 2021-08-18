@@ -7,6 +7,7 @@ endif ()
 find_package(Qt5 COMPONENTS Core Network REQUIRED)
 
 add_library(qt_rr_tcp
+        ${CMAKE_CURRENT_SOURCE_DIR}/src/RRTcpClient.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/src/RRTcpServer.cpp
         )
 

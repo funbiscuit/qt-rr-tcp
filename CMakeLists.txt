@@ -11,4 +11,5 @@ add_subdirectory(deps)
 add_subdirectory(lib)
 
 # examples
+add_subdirectory(example-client)
 add_subdirectory(example-server)
