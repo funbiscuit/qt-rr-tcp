@@ -11,5 +11,13 @@ add_subdirectory(deps)
 add_subdirectory(lib)
 
 # examples
-add_subdirectory(example-client)
-add_subdirectory(example-server)
+option(BUILD_EXAMPLES "Build example applications" OFF)
+
+# On Windows disable console if not needed
+if (${BUILD_EXAMPLES})
+    message(STATUS "Example applications are enabled")
+    add_subdirectory(example-client)
+    add_subdirectory(example-server)
+else ()
+    message(STATUS "Example applications are disabled")
+endif ()
